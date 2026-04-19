@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
     printf("Maximum number of meals is %d\n", max);
     printf("Average number of meals is %.2f\n", (float)total / PHILOSOPHER_NUM );
 
-    // cleanup process = destroy threads
+    // destroy threads
     pthread_mutex_destroy(&mutex);
     for (int i = 0; i < PHILOSOPHER_NUM; i++) { pthread_cond_destroy(&cond[i]); }
     return 0;
